@@ -1,5 +1,6 @@
 {
   "name": "hardhat-project",
+  "type": "commonjs",
   "scripts": {
     "build": "hardhat compile --show-stack-traces",
     "lint": "eslint .",
