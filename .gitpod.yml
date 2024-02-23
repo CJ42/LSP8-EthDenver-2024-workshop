@@ -1,0 +1,8 @@
+image: gitpod/workspace-bun
+
+tasks:
+  - name: Init Workshop repository
+  - init: |
+      bun install
+      bun run build
+      bun run remixd

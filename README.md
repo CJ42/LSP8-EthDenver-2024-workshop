@@ -9,15 +9,21 @@ We will deploying our contract using Remix an the LUKSO Browser Extension.
 1. [Install the LUKSO Browser Extension](https://docs.lukso.tech/install-up-browser-extension/).
 2. Create a Universal Profile on Testnet.
 3. Activate the LUKSO Browser Extension in your browser, and ** :warning: make sure you have de-activated Metamask.**
+4. Open this repository in Gitpod (link below 👇🏻)
+5. Open [Remix](https://remix.ethereum.org/#lang=en&optimize=true&runs=200&evmVersion=shanghai&version=soljson-v0.8.24+commit.e11b9ed9.js)
 
 ## Setup
 
+It is recommended to run this repository through the **Gitpod workspace**, to save you the hassle of 1) installing the dependencies, 2) building the artifacts, and 3) connect the repository to Remix. Gitpod will do all of that for you while you can enjoy a cup of coffee! 😃 ☕️
+
 **This Hardhat repository uses the [bun](https://bun.sh) package manager. Make sure to [install it](https://bun.sh/docs/installation) first.**
 
-Install the dependencies
+Install the dependencies:
 
 ```bash
 bun install
+bun run build
+bun run remixd
 ```
 
 ## Create the basis of the contract
