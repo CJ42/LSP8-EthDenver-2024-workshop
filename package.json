@@ -1,7 +1,7 @@
 {
   "name": "hardhat-project",
   "scripts": {
-    "build": "bun run --bun hardhat compile --show-stack-traces",
+    "build": "hardhat compile --show-stack-traces",
     "lint": "eslint .",
     "remixd": "remixd -s . -u https://remix.ethereum.org/#lang=en&optimize=true&runs=200&evmVersion=shanghai&version=soljson-v0.8.24+commit.e11b9ed9.js"
   },

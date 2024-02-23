@@ -1,8 +1,6 @@
-image: gitpod/workspace-bun
-
 tasks:
-  - name: Init Workshop repository
+  - name: 🎩 Init Workshop repository
   - init: |
-      bun install
-      bun run build
-      bun run remixd
+      yarn
+      yarn build
+      yarn remixd
