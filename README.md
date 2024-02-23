@@ -16,6 +16,8 @@ We will deploying our contract using Remix an the LUKSO Browser Extension.
 
 It is recommended to run this repository through the **Gitpod workspace**, to save you the hassle of 1) installing the dependencies, 2) building the artifacts, and 3) connect the repository to Remix. Gitpod will do all of that for you while you can enjoy a cup of coffee! 😃 ☕️
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/CJ42/LSP8-POAP-workshop)
+
 **This Hardhat repository uses the [bun](https://bun.sh) package manager. Make sure to [install it](https://bun.sh/docs/installation) first.**
 
 Install the dependencies:
