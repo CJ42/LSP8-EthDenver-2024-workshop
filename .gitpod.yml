@@ -1,6 +1,12 @@
+ports:
+  - name: Remixd
+    description: The main application web server
+    port: 65520
+    onOpen: open-browser
+
 tasks:
   - name: 🎩 Init Workshop repository
   - init: |
       yarn
       yarn build
-      yarn remixd
+      yarn remix-daemon
