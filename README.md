@@ -1,4 +1,6 @@
-# LUKSO POAP
+# LUKSO POAP Workshop - Eth Denver 2024
+
+![POAP LSP8 image](https://api.universalprofile.cloud/ipfs/QmR1kiBSKecNCU7TuBXuDCHxvujfYV4rcEXZMmDVWa4Xo9)
 
 ## Pre-requisite
 
