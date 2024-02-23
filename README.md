@@ -1,11 +1,12 @@
-# LSP HardHat Integration
+# LUKSO POAP
 
-This project is used as a guide to show how to setup HardHat to interact with **[LSPs](https://docs.lukso.tech/contracts/introduction)** smart contracts on **[LUKSO networks](https://docs.lukso.tech/networks/mainnet/parameters)**.
+## Pre-requisite
 
-## Guides
+We will deploying our contract using Remix an the LUKSO Browser Extension.
 
-- [Getting started with HardHat on LUKSO](https://docs.lukso.tech/learn/smart-contract-developers/getting-started)
-- [Create, deploy, and verify an LSP7 token](https://docs.lukso.tech/learn/smart-contract-developers/create-lsp7-token)
+1. [Install the LUKSO Browser Extension](https://docs.lukso.tech/install-up-browser-extension/).
+2. Create a Universal Profile on Testnet.
+3. Activate the LUKSO Browser Extension in your browser, and ** :warning: make sure you have de-activated Metamask.**
 
 ## Setup
 
@@ -17,54 +18,126 @@ Install the dependencies
 bun install
 ```
 
-Set the private environment variables
+## Create the basis of the contract
 
-```bash
-cp .env.example .env
+Create the contract and call it `MyLUKSOPOAP`.
+
+We will then inherit from LSP8 to implement the basic functionalities.
+
+The contract takes different parameters on deployment. To start, we will write them inlined in the inheritance declaration.
+
+---
+
+```solidity
+// SPDX-License-Identifier: Apache-2.0
+pragma solidity ^0.8.20;
+
+import { LSP8IdentifiableDigitalAsset } from "@lukso/lsp-smart-contracts/contracts/LSP8IdentifiableDigitalAsset/LSP8IdentifiableDigitalAsset.sol";
+
+contract MyLUKSOPoap is
+  LSP8IdentifiableDigitalAsset(
+    "My LUKSO POAP",
+    "LYXPOAP",
+    msg.sender, // deployer of the contract is the owner
+    1,
+    2
+  )
+{}
 ```
 
-> **INFO** Make sure to add the private key of an EOA for deployment. Optionally, you can provide a private key of a controller and a Universal Profile address to deploy contracts using your smart contract account.
+We will then import the constants from the `@lukso/lsp-smart-contracts` package for more meaningful values.
 
-## Development
+```solidity
+// SPDX-License-Identifier: Apache-2.0
+pragma solidity ^0.8.20;
 
-### Compile Contracts
+// modules
+import { LSP8IdentifiableDigitalAsset } from "@lukso/lsp-smart-contracts/contracts/LSP8IdentifiableDigitalAsset/LSP8IdentifiableDigitalAsset.sol";
 
-Compile all smart contracts within `/contracts`:
+// constants
+import { _LSP4_TOKEN_TYPE_NFT } from "@lukso/lsp-smart-contracts/contracts/LSP4DigitalAssetMetadata/LSP4Constants.sol";
+import { _LSP8_TOKENID_FORMAT_ADDRESS } from "@lukso/lsp-smart-contracts/contracts/LSP8IdentifiableDigitalAsset/LSP8Constants.sol";
 
-```bash
-npx hardhat compile
+contract MyLUKSOPoap is
+  LSP8IdentifiableDigitalAsset(
+    "My LUKSO POAP",
+    "LYXPOAP",
+    msg.sender, // deployer of the contract is the owner
+    _LSP4_TOKEN_TYPE_NFT, // each token on the contract represent an NFT
+    _LSP8_TOKENID_FORMAT_ADDRESS // each tokenId will be represented by the address of the user that claimed the POAP
+  )
+{}
 ```
 
-> **INFO** Add the `--verbose` and `--show-stack-traces` flags for further information.
+## Deployment and setting yourself as creator.
 
-### Deploy Contracts
+We will setup 2 things when we deploy our POAP here:
 
-Deploy a sample LSP7 contract with an Externally Owned Account:
+1. The metadata of the POAP, this includes images, etc... So that it can be visible on UI interfaces like _wallet.universalprofile.cloud_ or the LUKSO blockscout explorer.
 
-```bash
-npx hardhat --network luksoTestnet run scripts/deployEOA.ts
+2. The LSP4Creators[] list and its associated map, so that we can set ourselves as the creator and get it verified as LSP12 Issued Assets.
+
+I have uploaded some sample metadata on ipfs so tht you can retrieve them and you don't have to do it yourself. Pick from the list below.
+
+- poap code:
+  - icon image: `QmR1kiBSKecNCU7TuBXuDCHxvujfYV4rcEXZMmDVWa4Xo9`
+  - background image: `QmVcEqknTxp9aLXQvByvxrrFtgpR2UtvXvJzp2nQDLkDgj`
+  - metadata: `QmcCqW4JBsRJuDJHzLMzGzxZZxeEMCqXqNhWBimzfqbgta`
+
+If you don't have a UP yet and haven't installed the UP Browser Extnsion yet, you can use my UP address below as a creator for example purpose and see how it will display as a LSP4Creator.
+
+```solidity
+/// @notice Replace the address below with your UP address here to define yourself as the creator.
+/// @dev For people who do not have a UP, simply leave this address for demo purpose (it is my UP address).
+address constant WORKSHOP_CREATOR = 0x9fc7e5095A054dfA3c6b237E0e5d686638394248;
 ```
 
-Deploy a sample LSP7 contract with a Universal Profile:
+## Setup the basics functionalities
 
-```bash
-npx hardhat --network luksoTestnet run scripts/deployUP.ts
+We will now setup the following core logic to make our LSP8 a POAP like contract.
+
+- enable users to claim their POAP themselves.
+- make the POAP of each user non-transferable.
+
+We will represent the POAP claimed by each user as a tokenId constructed as the address of the user that claimed the POAP as a `bytes32`, left padded with `00`.
+
+```solidity
+function claim() external {
+  bytes32 tokenId = bytes32(uint256(uint160(msg.sender)));
+  _mint(msg.sender, tokenId, true, "");
+}
 ```
 
-> **INFO** Adjust the network and token name within the command and script.
+We will then overwrite the internal `_transfer` function to make each POAP non-transferrable and tied to the user once it has been claimed.
 
-### Verify Contracts
-
-Verify your contracts with the blockscout API and their constructor parameters:
-
-```bash
-npx hardhat verify <myContractAddress> --constructor-args ./verify/myContractParameters.ts --network luksoTestnet
+```solidity
+function _transfer(
+  address /* from */,
+  address /* to */,
+  bytes32 /* tokenId */,
+  bool /* force */,
+  bytes memory /* data */
+) internal pure override {
+  revert("LUKSO POAP is non-transferrable");
+}
 ```
 
-## Packages
+## Deploying our POAP
 
-- [`hardhat`](https://hardhat.org/docs): Smart contract development environment
-- [`@nomiclabs/hardhat-toolbox`](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-toolbox): Test, deploy, and verify contracts
-- [`@lukso/lsp-smart-contracts`](https://docs.lukso.tech/tools/lsp-smart-contracts/getting-started): LUKSO smart contract collection
-- [`dotenv`](https://www.npmjs.com/package/dotenv): Manage private deployer information
-- [`prettier`](https://www.npmjs.com/package/prettier): Code Formatting
+Go to Remix IDE and ensure you have deactivated Metamask.
+
+We will deploy the POAP contract and set the metadata (pre-filled).
+
+Then you can claim your POAP on the contract
+
+## Verifying our deployed POAP contract
+
+You can then verify the deployed contract on LUKSO Testnet by running the following command:
+
+```bash
+npx hardhat verify <lsp8-poap-contract-address> --constructor-args ./scripts/constructor-args.js --network luksoTestnet
+```
+
+## Expanding, moving forward
+
+You can then instead inherit the contract from `LSP8IdentifiableDigitalAssetInitAbstract` and implement an `initialize(...)` function. You can then deploy this base implementation contract once and have users of your application deploy their own as proxies. This way, you can implement the proxy pattern which will make it cheaper for your user to deploy their own POAP contract.
