@@ -2,7 +2,7 @@
 
 ## nft icon code
 
-![NFT Image](./img/1-nft-icon-code.webp)
+<img src="./img/1-nft-icon-code.webp" heigth="50px"/>
 
 - IPFS Icon image URL: [`https://api.universalprofile.cloud/ipfs/QmR1kiBSKecNCU7TuBXuDCHxvujfYV4rcEXZMmDVWa4Xo9`](https://api.universalprofile.cloud/ipfs/QmR1kiBSKecNCU7TuBXuDCHxvujfYV4rcEXZMmDVWa4Xo9)
 - Metadata URL: [`https://api.universalprofile.cloud/ipfs/QmTq8tHEWwEh88oLwH8dkwP8w33ua1Z6nYk6Pi11KFzVK9` ](https://api.universalprofile.cloud/ipfs/QmTq8tHEWwEh88oLwH8dkwP8w33ua1Z6nYk6Pi11KFzVK9)
@@ -10,7 +10,7 @@
 
 ## nft icon classic
 
-![NFT Image](./img/2-nft-icon-classic.webp)
+<img src="./img/2-nft-icon-classic.webp" heigth="50px"/>
 
 - IPFS Icon image URL: [`https://api.universalprofile.cloud/ipfs/QmWky3JzTisCBMNRWN98xDYSR5pRQSdam6zB9ptPVGwXCa`](https://api.universalprofile.cloud/ipfs/QmWky3JzTisCBMNRWN98xDYSR5pRQSdam6zB9ptPVGwXCa)
 - Metadata URL: [`https://api.universalprofile.cloud/ipfs/Qmba8hbQX4VDjjwg6NUQq3wzqw7Gb65KRM3BBGo96TPPXK` ](https://api.universalprofile.cloud/ipfs/Qmba8hbQX4VDjjwg6NUQq3wzqw7Gb65KRM3BBGo96TPPXK)
@@ -18,7 +18,7 @@
 
 ## nft icon creative
 
-![NFT Image](./img/3-nft-icon-creative.webp)
+<img src="./img/3-nft-icon-creative.webp" heigth="50px"/>
 
 - IPFS Icon image URL: [`https://api.universalprofile.cloud/ipfs/QmTQtGvs51j2dveR3Ndxop6KeFKf1ZVajoJhAQDAZXFvRc`](https://api.universalprofile.cloud/ipfs/QmTQtGvs51j2dveR3Ndxop6KeFKf1ZVajoJhAQDAZXFvRc)
 
@@ -27,7 +27,7 @@
 
 ## nft icon gold
 
-![NFT Image](./img/4-nft-icon-gold.webp)
+<img src="./img/4-nft-icon-gold.webp" heigth="50px"/>
 
 - IPFS Icon image URL: [`https://api.universalprofile.cloud/ipfs/QmRq1ohoxRDevLApt2hQfsTKo4nGSLTzdrRJUJEv9RTQBr`](https://api.universalprofile.cloud/ipfs/QmRq1ohoxRDevLApt2hQfsTKo4nGSLTzdrRJUJEv9RTQBr)
 - Metadata URL: [`https://api.universalprofile.cloud/ipfs/QmP9VdkG3RsBGWYhr9bZiwo7D2iBVSNxfMW2vLcB63KAoW`](https://api.universalprofile.cloud/ipfs/QmP9VdkG3RsBGWYhr9bZiwo7D2iBVSNxfMW2vLcB63KAoW)
@@ -35,7 +35,7 @@
 
 ## nft icon minimal
 
-![NFT Image](./img/5-nft-icon-minimal.webp)
+<img src="./img/5-nft-icon-minimal.webp" heigth="50px"/>
 
 - IPFS Icon image URL: [`https://api.universalprofile.cloud/ipfs/Qmd9gz7mvvws9bDGYJbFqFhn4mrKQAP4JHALyUrYB4xc8r`](https://api.universalprofile.cloud/ipfs/Qmd9gz7mvvws9bDGYJbFqFhn4mrKQAP4JHALyUrYB4xc8r)
 - Metadata URL: [`https://api.universalprofile.cloud/ipfs/QmeoGq8H6u9JEAe6m4MhN5jjSmoNJ82yZMD3DQkvxA8XKe`](https://api.universalprofile.cloud/ipfs/QmeoGq8H6u9JEAe6m4MhN5jjSmoNJ82yZMD3DQkvxA8XKe)
@@ -43,7 +43,7 @@
 
 ## nft icon nature
 
-![NFT Image](./img/6-nft-icon-nature.webp)
+<img src="./img/6-nft-icon-nature.webp" heigth="50px"/>
 
 - IPFS Icon image URL: [`https://api.universalprofile.cloud/ipfs/QmbNcZxnAZkjbdW2MH4XWVTHJRsk2MGs14PG5UBoL7v8dq`](https://api.universalprofile.cloud/ipfs/QmbNcZxnAZkjbdW2MH4XWVTHJRsk2MGs14PG5UBoL7v8dq)
 - Metadata URL: [`https://api.universalprofile.cloud/ipfs/QmQLyLcb3ncAPCLfHynvc7ARo428cxziSSqiADW3p53coW`](https://api.universalprofile.cloud/ipfs'/QmQLyLcb3ncAPCLfHynvc7ARo428cxziSSqiADW3p53coW)

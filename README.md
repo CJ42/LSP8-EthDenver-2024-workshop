@@ -16,25 +16,15 @@ You are all set and ready!
 
 ## Setup
 
-### Automatic setup
-
 It is recommended to open the Solidity contract for the workshop directly on Remix using the link below. This will save you the hassle of 1) installing the dependencies, 2) building the artifacts, and 3) connect the repository to Remix, and do all the job for you while you can enjoy a cup of coffee! 😃 ☕️
 
-[⚒️ Open in Remix](https://remix.ethereum.org/#url=https://github.com/CJ42/LSP8-EthDenver-2024-workshop/blob/main/contracts/LUKSOAttendanceNFT.sol)
+[⚒️ 1. Open in Remix](https://remix.ethereum.org/#url=https://github.com/CJ42/LSP8-EthDenver-2024-workshop/blob/main/contracts/LUKSOAttendanceNFT.sol)
 
-[🖥️ Visit the dApp UI for this workshop](https://lsp8-eth-denver-workshop-ui.vercel.app/)
+[🎨 2. Pick some Metadata for your NFT (`VerifiableURI` field)](./scripts/README.md)
 
-### Manual setup
+[🖥️ 3. Visit the dApp UI for this workshop](https://lsp8-eth-denver-workshop-ui.vercel.app/)
 
-**This Hardhat repository uses the [bun](https://bun.sh) package manager. Make sure to [install it](https://bun.sh/docs/installation) first.**
-
-Clone the repository, install the dependencies and connect Remix to your local file system to load the contract on Remix:
-
-```bash
-bun install
-bun run build
-bun run remixd
-```
+---
 
 ## Create the basis of the contract
 
