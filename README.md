@@ -1,6 +1,6 @@
-# LUKSO POAP Workshop - Eth Denver 2024
+# LUKSO LSP8 🎨 - Proof of Attendance NFT Workshop - Eth Denver 2024 🦄
 
-![POAP LSP8 image](https://api.universalprofile.cloud/ipfs/QmR1kiBSKecNCU7TuBXuDCHxvujfYV4rcEXZMmDVWa4Xo9)
+![NFTs icons list image](./scripts/img/nfts-images.jpeg)
 
 ## Pre-requisite
 
@@ -32,7 +32,7 @@ bun run build
 bun run remixd
 ```
 
-## Create the basis of the contract
+## Create the basis of the contract
 
 Create the contract and call it `MyLUKSOPOAP`.
 

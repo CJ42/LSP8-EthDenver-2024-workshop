@@ -106,10 +106,10 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@erc725/erc725.js@^0.23.0":
-  version "0.23.0"
-  resolved "https://registry.yarnpkg.com/@erc725/erc725.js/-/erc725.js-0.23.0.tgz#e3e929687977aea3fef8617e62e2191518a37f16"
-  integrity sha512-v2qPnH7IXSh4td3br+LNXdhfiFrtx/AOBnNbFZKZVHQdVdapKAtZVmrKV1svTlztxxRgQQ24wLgEMkxr9GiguA==
+"@erc725/erc725.js@^0.23.1":
+  version "0.23.1"
+  resolved "https://registry.yarnpkg.com/@erc725/erc725.js/-/erc725.js-0.23.1.tgz#30e349eb5e2c23008c3203a380368a7ab011ae05"
+  integrity sha512-GJNy4K3utdyd8eSSh15zrH9kbir6YcchiksJER4yMaUbfDRBzMWRn/mQ/ndHM+An+tnnCEmLhtu6/OK0vDNdiQ==
   dependencies:
     add "^2.0.6"
     ethereumjs-util "^7.1.5"

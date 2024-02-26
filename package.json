@@ -7,7 +7,7 @@
     "remix-daemon": "remixd -s . -u https://remix.ethereum.org/#lang=en&optimize=true&runs=200&evmVersion=shanghai&version=soljson-v0.8.24+commit.e11b9ed9.js"
   },
   "devDependencies": {
-    "@erc725/erc725.js": "^0.23.0",
+    "@erc725/erc725.js": "^0.23.1",
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.6",
     "@nomicfoundation/hardhat-ethers": "^3.0.5",
     "@nomicfoundation/hardhat-network-helpers": "^1.0.10",

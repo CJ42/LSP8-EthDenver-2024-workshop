@@ -28,14 +28,12 @@ import {
     _LSP8_TOKENID_FORMAT_UNIQUE_ID
 } from "@lukso/lsp-smart-contracts/contracts/LSP8IdentifiableDigitalAsset/LSP8Constants.sol";
 
-contract MyLUKSOPoap is
+contract LUKSOAttendanceNFT is
     LSP8(
-        "My LUKSO POAP",
-        "LYXPOAP",
-        // deployer of the contract is the owner
-        msg.sender,
-        // each token on the contract represent an NFT
-        _LSP4_TOKEN_TYPE_NFT,
+        "My LUKSO Attendance NFT", // Name
+        "LYXLAN", // Symbol (Please find a better one, we are not talking about "Local Area Network"!
+        msg.sender, // deployer of the contract is the owner
+        _LSP4_TOKEN_TYPE_NFT, // each token on the contract represent an NFT
         _LSP8_TOKENID_FORMAT_UNIQUE_ID // each tokenId will be represented as a unique ID
     )
 {
@@ -43,10 +41,11 @@ contract MyLUKSOPoap is
 
     /// @notice Replace the address below with your UP address here to define yourself as the creator.
     /// @dev For people who do not have a UP, simply leave this address for demo purpose (it is my UP address).
-    address constant POAP_CREATOR = 0x87cC4Edf3E4EfF2eD959Db21e2C1295D401B7983;
+    address constant PROOF_OF_ATTENDANCE_NFT_CREATOR =
+        0x38382B0437453004AC1af86839249037b130417B;
 
-    /// @notice Replace with the Verifiable URI for the design of your POAP
-    /// @dev Or leave it as it is to keep the default one `poap-icon-default.png`.
+    /// @notice Replace with the Verifiable URI for the design of your Proof of Attendance NFT.
+    /// @dev Or leave it as it is to keep the default one `nft-icon-default.png`.
     bytes constant VERIFIABLE_URI =
         hex"00006f357c6a0020f54eb9ca225c71ad8631576512a36c72bc9a367164545e7b9e4c6f9e770dabc2697066733a2f2f516d556d747a67394361416872786170474a774a7969756f724d625a7279616a6e326970756d6933325663593748";
 
@@ -65,10 +64,13 @@ contract MyLUKSOPoap is
         bytes32 lsp4CreatorArrayAtIndex = _LSP4_CREATORS_ARRAY_KEY
             .generateArrayElementKeyAtIndex(0);
 
-        _setData(lsp4CreatorArrayAtIndex, abi.encodePacked(POAP_CREATOR));
+        _setData(
+            lsp4CreatorArrayAtIndex,
+            abi.encodePacked(PROOF_OF_ATTENDANCE_NFT_CREATOR)
+        );
 
         bytes32 lsp4CreatorMapKey = _LSP4_CREATORS_MAP_KEY_PREFIX
-            .generateMappingKey(bytes20(POAP_CREATOR));
+            .generateMappingKey(bytes20(PROOF_OF_ATTENDANCE_NFT_CREATOR));
 
         _setData(
             lsp4CreatorMapKey,
@@ -76,7 +78,7 @@ contract MyLUKSOPoap is
         );
     }
 
-    /// @dev The tokenId for the POAP of each user is constructed as the hash of the user address who claimed it.
+    /// @dev The tokenId for the NFT of each user is constructed as the hash of the user address who claimed it.
     /// The hashed address is packed encoded (not zero left padded) so that we can easily re-calculate the tokenId
     /// by simply copy pasting the 20 bytes address in hashing tool like keccak256 online
     // https://emn178.github.io/online-tools/keccak_256.html
@@ -96,6 +98,6 @@ contract MyLUKSOPoap is
         bool /* force */,
         bytes memory /* data */
     ) internal pure override {
-        revert("LUKSO POAP is non-transferrable");
+        revert("This NFT is non-transferrable");
     }
 }
