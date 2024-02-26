@@ -9,8 +9,7 @@ We will deploying our contract using Remix an the LUKSO Browser Extension.
 1. [Install the LUKSO Browser Extension](https://docs.lukso.tech/install-up-browser-extension/).
 2. Create a Universal Profile on Testnet.
 3. Activate the LUKSO Browser Extension in your browser, and **:warning: make sure you have de-activated Metamask.**
-4. Open this repository in Gitpod (link below 👇🏻)
-5. Open the smart contract in [Remix](https://remix.ethereum.org/#url=https://github.com/CJ42/LSP8-EthDenver-2024-workshop/blob/main/contracts/LUKSOAttendanceNFT.sol)
+4. Open the smart contract in [Remix](https://remix.ethereum.org/#url=https://github.com/CJ42/LSP8-EthDenver-2024-workshop/blob/main/contracts/LUKSOAttendanceNFT.sol)
 
 You are all set and ready!
 
