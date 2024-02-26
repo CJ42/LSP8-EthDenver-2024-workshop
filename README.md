@@ -139,8 +139,8 @@ Select the Metadata you want by taking one of the [`VerifiableURI` from the icon
 
 ```solidity
 /// @notice Replace with the Verifiable URI for the design of your Proof of Attendance NFT.
-/// @dev Or leave it as it is to keep the default one `nft-icon-default.png`.
-bytes constant VERIFIABLE_URI = hex"00006f357c6a0020f54eb9ca225c71ad8631576512a36c72bc9a367164545e7b9e4c6f9e770dabc2697066733a2f2f516d556d747a67394361416872786170474a774a7969756f724d625a7279616a6e326970756d6933325663593748";
+/// @dev Or leave it as it is to keep the default one from `./scripts/img/5-nft-icon-minimal.webp`.
+bytes constant VERIFIABLE_URI = hex"00006f357c6a0020b48d38f93eaa084033fc5970bf96e559c33c4cdc07d889ab00b4d63f9590739d697066733a2f2f516d656f477138483675394a454165366d344d684e356a6a536d6f4e4a3832795a4d443344516b76784138584b65";
 ```
 
 > **Note:** this value is already pre-filled for you with the minimal NFT icon. But feel free to replace it with the image you like.
