@@ -1,7 +1,7 @@
 import axios from 'axios';
 import FormData from 'form-data';
 import fs from 'fs';
-const JWT = 'your-piñata-jwt-token';
+const JWT = '<piñata-jwt-token>';
 
 const imageFiles = [
   '1-nft-icon-code.webp',
@@ -13,9 +13,9 @@ const imageFiles = [
 ];
 
 const uploadImagesTOIPFS = async () => {
-  imageFiles.forEach(async (image) => {
+  imageFiles.forEach(async (imageName) => {
     const formData = new FormData();
-    const src = './scripts/img/' + image;
+    const src = './scripts/img/' + imageName;
 
     const file = fs.createReadStream(src);
     formData.append('file', file);
@@ -38,7 +38,8 @@ const uploadImagesTOIPFS = async () => {
           Authorization: `Bearer ${JWT}`,
         },
       });
-      console.log(`Uploaded image ${image} on IPFS successfully! --> ${image.data}`);
+      console.log(`Uploaded image ${imageName} on IPFS successfully! ⬇️`);
+      console.log(image.data);
     } catch (error) {
       console.log(error);
     }

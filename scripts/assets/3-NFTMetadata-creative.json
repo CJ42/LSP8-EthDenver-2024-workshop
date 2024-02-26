@@ -1,0 +1,55 @@
+{
+  "LSP4Metadata": {
+    "description": "LUKSO LSP8 Proof of Attendance NFT Workshop - Example Creative.",
+    "links": [
+      { "title": "Twitter", "url": "https://twitter.com/lukso_io" },
+      { "title": "docs.lukso.tech", "url": "https://docs.lukso.tech" }
+    ],
+    "icon": [
+      {
+        "width": 256,
+        "height": 256,
+        "url": "ipfs://QmTQtGvs51j2dveR3Ndxop6KeFKf1ZVajoJhAQDAZXFvRc",
+        "verification": {
+          "method": "keccak256(bytes)",
+          "data": "0x5e1aa760e59ef3f9a2880428ac25e311fd7057bceffb7f8c6f901cbe77fb99c9"
+        }
+      }
+    ],
+    "images": [
+      [
+        {
+          "width": 1024,
+          "height": 974,
+          "url": "ipfs://QmTQtGvs51j2dveR3Ndxop6KeFKf1ZVajoJhAQDAZXFvRc",
+          "verification": {
+            "method": "keccak256(bytes)",
+            "data": "0x5e1aa760e59ef3f9a2880428ac25e311fd7057bceffb7f8c6f901cbe77fb99c9"
+          }
+        }
+      ]
+    ],
+    "attributes": [
+      {
+        "key": "Standard type",
+        "value": "LSP",
+        "type": "string"
+      },
+      {
+        "key": "Standard number",
+        "value": 4,
+        "type": "number"
+      },
+      {
+        "key": "🆙",
+        "value": true,
+        "type": "boolean"
+      },
+      {
+        "key": "Icon type",
+        "value": "Creative",
+        "type": "string"
+      }
+    ]
+  }
+}

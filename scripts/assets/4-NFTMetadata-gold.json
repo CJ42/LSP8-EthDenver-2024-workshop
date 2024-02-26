@@ -1,6 +1,6 @@
 {
   "LSP4Metadata": {
-    "description": "LUKSO LSP8 Proof of Attendance NFT Workshop Example.",
+    "description": "LUKSO LSP8 Proof of Attendance NFT Workshop - Example Gold.",
     "links": [
       { "title": "Twitter", "url": "https://twitter.com/lukso_io" },
       { "title": "docs.lukso.tech", "url": "https://docs.lukso.tech" }
@@ -9,10 +9,10 @@
       {
         "width": 256,
         "height": 256,
-        "url": "ipfs://QmR1kiBSKecNCU7TuBXuDCHxvujfYV4rcEXZMmDVWa4Xo9",
+        "url": "ipfs://QmRq1ohoxRDevLApt2hQfsTKo4nGSLTzdrRJUJEv9RTQBr",
         "verification": {
           "method": "keccak256(bytes)",
-          "data": "0xbf3dc91e587e0e83018feacd43c39cb552ee767c63690e481a8f0ef0ef85cdfd"
+          "data": "0x2137ef29cc387dc94f753325f5027b0b412ef25774bed29a720873ff95f431ab"
         }
       }
     ],
@@ -21,10 +21,10 @@
         {
           "width": 1024,
           "height": 974,
-          "url": "ipfs://QmR1kiBSKecNCU7TuBXuDCHxvujfYV4rcEXZMmDVWa4Xo9",
+          "url": "ipfs://QmRq1ohoxRDevLApt2hQfsTKo4nGSLTzdrRJUJEv9RTQBr",
           "verification": {
             "method": "keccak256(bytes)",
-            "data": "0xbf3dc91e587e0e83018feacd43c39cb552ee767c63690e481a8f0ef0ef85cdfd"
+            "data": "0x2137ef29cc387dc94f753325f5027b0b412ef25774bed29a720873ff95f431ab"
           }
         }
       ]
@@ -44,6 +44,11 @@
         "key": "🆙",
         "value": true,
         "type": "boolean"
+      },
+      {
+        "key": "Icon type",
+        "value": "Gold",
+        "type": "string"
       }
     ]
   }
