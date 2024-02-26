@@ -101,12 +101,12 @@ address constant WORKSHOP_CREATOR = 0x9fc7e5095A054dfA3c6b237E0e5d686638394248;
 
 ## Setup the basics functionalities
 
-We will now setup the following core logic to make our LSP8 a POAP like contract.
+We will now setup the following core logic to make our LSP8 an NFT that proves you attended this workshop. To do so, we will set the following functionalities:
 
 - enable users to claim their POAP themselves.
 - make the POAP of each user non-transferable.
 
-We will represent the POAP claimed by each user as a tokenId constructed as the address of the user that claimed the POAP as a `bytes32`, left padded with `00`.
+We will represent the POAP claimed by each user as a unique tokenId constructed as the hash of the abi-encoded address of the user that claimed (`bytes32`, left padded with `00`).
 
 ```solidity
 function claim() external {
@@ -125,17 +125,25 @@ function _transfer(
   bool /* force */,
   bytes memory /* data */
 ) internal pure override {
-  revert("LUKSO POAP is non-transferrable");
+  revert("This NFT is non-transferrable");
 }
 ```
 
-## Deploying our POAP
+## Deploying our LSP8 contract
 
 Go to Remix IDE and ensure you have deactivated Metamask.
 
-We will deploy the POAP contract and set the metadata (pre-filled).
+We will deploy the LSP8 contract.
 
-Then you can claim your POAP on the contract
+Select the Metadata you want by taking one of the [`VerifiableURI` from the icon you like](./scripts/README.md), and replace the value under the `constant VERIFIABLE_URI` field in the Solidity code.
+
+```solidity
+/// @notice Replace with the Verifiable URI for the design of your Proof of Attendance NFT.
+/// @dev Or leave it as it is to keep the default one `nft-icon-default.png`.
+bytes constant VERIFIABLE_URI = hex"00006f357c6a0020f54eb9ca225c71ad8631576512a36c72bc9a367164545e7b9e4c6f9e770dabc2697066733a2f2f516d556d747a67394361416872786170474a774a7969756f724d625a7279616a6e326970756d6933325663593748";
+```
+
+> **Note:** this value is already pre-filled for you with the minimal NFT icon. But feel free to replace it with the image you like.
 
 ## Verifying our deployed POAP contract
 

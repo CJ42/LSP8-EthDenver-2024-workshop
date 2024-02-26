@@ -42,7 +42,7 @@ contract LUKSOAttendanceNFT is
     /// @notice Replace the address below with your UP address here to define yourself as the creator.
     /// @dev For people who do not have a UP, simply leave this address for demo purpose (it is my UP address).
     address constant PROOF_OF_ATTENDANCE_NFT_CREATOR =
-        0x38382B0437453004AC1af86839249037b130417B;
+        0xc2C200D3E2635BDF4F1fF607d215Ec97F0C122AE;
 
     /// @notice Replace with the Verifiable URI for the design of your Proof of Attendance NFT.
     /// @dev Or leave it as it is to keep the default one `nft-icon-default.png`.
