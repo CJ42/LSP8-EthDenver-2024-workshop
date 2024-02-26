@@ -11,7 +11,7 @@ const pinFileToIPFS = async () => {
   formData.append('file', file);
 
   const pinataMetadata = JSON.stringify({
-    name: 'POAP JSON Metadata',
+    name: 'LUKSO LSP8 NFT Proof of Attendance JSON Metadata',
   });
   formData.append('pinataMetadata', pinataMetadata);
 
@@ -21,17 +21,13 @@ const pinFileToIPFS = async () => {
   formData.append('pinataOptions', pinataOptions);
 
   try {
-    const image = await axios.post(
-      'https://api.pinata.cloud/pinning/pinFileToIPFS',
-      formData,
-      {
-        //   maxBodyLength: 'Infinity',
-        headers: {
-          'Content-Type': `multipart/form-data; boundary=${formData.getBoundary()}`,
-          Authorization: `Bearer ${JWT}`,
-        },
+    const image = await axios.post('https://api.pinata.cloud/pinning/pinFileToIPFS', formData, {
+      //   maxBodyLength: 'Infinity',
+      headers: {
+        'Content-Type': `multipart/form-data; boundary=${formData.getBoundary()}`,
+        Authorization: `Bearer ${JWT}`,
       },
-    );
+    });
     console.log(image.data);
   } catch (error) {
     console.log(error);
