@@ -20,7 +20,9 @@ You are all set and ready!
 
 It is recommended to open the Solidity contract for the workshop directly on Remix using the link below. This will save you the hassle of 1) installing the dependencies, 2) building the artifacts, and 3) connect the repository to Remix, and do all the job for you while you can enjoy a cup of coffee! 😃 ☕️
 
-[Open in Remix](https://remix.ethereum.org/#url=https://github.com/CJ42/LSP8-EthDenver-2024-workshop/blob/main/contracts/LUKSOAttendanceNFT.sol)
+[⚒️ Open in Remix](https://remix.ethereum.org/#url=https://github.com/CJ42/LSP8-EthDenver-2024-workshop/blob/main/contracts/LUKSOAttendanceNFT.sol)
+
+[🖥️ Visit the dApp UI for this workshop](https://lsp8-eth-denver-workshop-ui.vercel.app/)
 
 ### Manual setup
 
