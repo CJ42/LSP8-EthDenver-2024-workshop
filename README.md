@@ -10,7 +10,9 @@ We will deploying our contract using Remix an the LUKSO Browser Extension.
 2. Create a Universal Profile on Testnet.
 3. Activate the LUKSO Browser Extension in your browser, and **:warning: make sure you have de-activated Metamask.**
 4. Open this repository in Gitpod (link below 👇🏻)
-5. Open [Remix](https://remix.ethereum.org/#lang=en&optimize=true&runs=200&evmVersion=shanghai&version=soljson-v0.8.24+commit.e11b9ed9.js)
+5. Open the smart contract in [Remix](https://remix.ethereum.org/#url=https://github.com/CJ42/LSP8-EthDenver-2024-workshop/blob/main/contracts/LUKSOAttendanceNFT.sol)
+
+You are all set and ready!
 
 ## Setup
 
@@ -18,7 +20,7 @@ We will deploying our contract using Remix an the LUKSO Browser Extension.
 
 It is recommended to open the Solidity contract for the workshop directly on Remix using the link below. This will save you the hassle of 1) installing the dependencies, 2) building the artifacts, and 3) connect the repository to Remix, and do all the job for you while you can enjoy a cup of coffee! 😃 ☕️
 
-[Open in Remix](https://remix.ethereum.org/#url=https://github.com/CJ42/LSP8-POAP-workshop/blob/main/contracts/MyLUKSOPoap.sol)
+[Open in Remix](https://remix.ethereum.org/#url=https://github.com/CJ42/LSP8-EthDenver-2024-workshop/blob/main/contracts/LUKSOAttendanceNFT.sol)
 
 ### Manual setup
 
